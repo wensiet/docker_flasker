@@ -28,7 +28,7 @@ class Article(db.Model):
 
 @app.route('/')
 def hello():
-    return "Hello world!"
+    return render_template("home.html")
 
 
 @app.route('/create_article', methods=['POST', 'GET'])
