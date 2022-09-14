@@ -10,5 +10,5 @@ services:
     volumes:
       - ./backend:/backend
     ports:
-      - "5000:5000"
+      - "49784:49784"
     command: python app.py
