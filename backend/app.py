@@ -67,6 +67,4 @@ def delete_post(id):
 
 
 if __name__ == "__main__":
-    print("Inser IP: ")
-    scl = str(input())
-    app.run(host=scl)
+    app.run(host='94.103.84.1')
