@@ -72,6 +72,12 @@ def delete_post(id):
         return "There is no such article."
 
 
+@app.route('/get-query')
+def get_query():
+    data = request.args.get('id')
+    return '''<h2>Got data: {}</h2>'''.format(data)
+
+
 if __name__ == "__main__":
     ip = '194.58.118.188'
     app.run(host=ip, port=80)  # smth
