@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+More about Articles
+{% endblock %}
+{% block body %}
+<div>
+    <div class="form form-control">
+        <h2>{{article.title}}</h2>
+        <p>{{article.intro}}</p>
+        <p>{{article.text}}</p>
+        <p><b>Date: {{article.date.date()}}</b></p>
+        <a href="/posts" class="btn btn-secondary">Back</a>
+    </div>
+</div>
+{% endblock %}
