@@ -27,6 +27,7 @@ class Article(db.Model):
 
 
 @app.route('/')
+@app.route('/home')
 def hello():
     return render_template("home.html")
 
