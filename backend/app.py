@@ -3,10 +3,16 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask import request
 from flask import redirect
+import socket
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
+
+
+def get_ip():
+    ip = socket.gethostbyname(socket.gethostname())
+    return ip
 
 
 class Article(db.Model):
@@ -67,4 +73,5 @@ def delete_post(id):
 
 
 if __name__ == "__main__":
-    app.run(host='94.103.84.238', port=80)  # smth
+
+    app.run(host=get_ip(), port=80)  # smth
