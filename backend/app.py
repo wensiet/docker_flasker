@@ -67,4 +67,4 @@ def delete_post(id):
 
 
 if __name__ == "__main__":
-    app.run(host='94.103.84.238', port=49784)  # smth
+    app.run(host='94.103.84.1', port=49784)  # smth
